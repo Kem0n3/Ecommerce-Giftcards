@@ -15,8 +15,8 @@ $result = $conn->query($sql);
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="home.css">
-        <link rel="stylesheet" href="cart.css">
+        <link rel="stylesheet" href="css/home.css">
+        <link rel="stylesheet" href="css/cart.css">
         <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     </head>
     <body>
@@ -132,6 +132,6 @@ $result = $conn->query($sql);
 
 
 
-        <script src="addToCart.js" async defer></script>
+        <script src="js/addToCart.js" async defer></script>
     </body>
 </html>
