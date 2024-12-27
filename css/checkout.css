@@ -1,0 +1,362 @@
+/* Checkout Container */
+.checkout-container {
+    width: 80%;
+    margin: 40px auto;
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+}
+
+.checkout-form {
+    width: 100%;
+    max-width: 800px;
+    background-color: #f3f4f6;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+}
+
+.checkout-form h2 {
+    color: #2E4156;
+    font-size: 26px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Form Sections */
+.form-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-section h3 {
+    color: #2E4156;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* Form Groups */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #2E4156;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    height: 40px;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: "Montserrat", serif;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #2E4156;
+}
+
+/* Expiry Date Inputs */
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.expiry-inputs {
+    display: flex;
+    gap: 10px;
+}
+
+.expiry-inputs select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: "Montserrat", serif;
+}
+
+/* CVV Input */
+#cvv {
+    width: 100px;
+}
+
+/* Order Summary */
+.order-summary {
+    margin-top: 30px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.order-summary h3 {
+    color: #2E4156;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 16px;
+    color: #2E4156;
+}
+
+.order-total {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 2px solid #eee;
+    font-size: 18px;
+    color: #2E4156;
+}
+
+/* Checkout Button */
+.checkout-button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-top: 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2E4156;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: "Montserrat", serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.checkout-button:hover {
+    background-color: #3a4f68;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Error States */
+.form-group input.error {
+    border-color: #ff4444;
+}
+
+.error-message {
+    color: #ff4444;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .checkout-container {
+        width: 90%;
+        padding: 15px;
+    }
+    
+    .form-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .form-section {
+        padding: 15px;
+    }
+    
+    .checkout-button {
+        font-size: 16px;
+        padding: 12px;
+    }
+}
+
+/* Loading State */
+.checkout-button.loading {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    position: relative;
+}
+
+.checkout-button.loading::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    margin: -10px 0 0 -10px;
+    border: 3px solid #ffffff;
+    border-top: 3px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+nav {
+    margin: auto;
+    width: 78%;
+    height: 10vh;
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav h1 {
+    margin: 0; 
+    color: #2E4156;
+    font-size: 26px;
+}
+
+nav .site-title-link {
+    text-decoration: none; 
+    color: inherit; 
+}
+
+.site-title-link:hover {
+    color: #b5bec9;
+    cursor: pointer;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 50px; 
+    margin: 0; 
+    padding: 0; 
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.3s linear;
+    color: #2E4156;
+    line-height: 1; 
+}
+
+nav ul li a:hover {
+    color: grey;
+}
+
+
+/* Footer */
+footer {
+    width: 100%;
+    height: auto; /* Let height adjust based on content */
+    background-color: #2E4156;
+    margin: 0;
+    margin-top: 100px;
+    padding: 20px 0; /* Increase padding for better spacing */
+    box-sizing: border-box; /* Ensure padding and borders are included in the width/height */
+}
+
+footer .footer-container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Wrap content on smaller screens */
+    gap: 80px; /* Add spacing between items */
+    align-items: flex-start; /* Align items at the top */
+}
+
+footer .footer-links,
+footer .footer-social,
+footer .footer-support {
+    flex: 1;
+    min-width: 200px; /* Ensure sections don't shrink too small */
+    margin: 20px;
+}
+
+footer h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #e1e6ec;
+    padding: 0;
+    text-align: left; /* Align headings to the left */
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+}
+
+footer ul li {
+    margin-bottom: 15px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: #e1e6ec;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+    color: #b5bec9;
+}
+
+footer .footer-support p {
+    font-size: 16px;
+    line-height: 24px;
+    margin: 10px 0;
+    color: #e1e6ec;
+}
+
+footer .footer-support a {
+    text-decoration: none;
+    color: #e1e6ec;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+footer .footer-support a:hover {
+    color: #f7f9fb;
+}
+
+footer .footer-social ul {
+    display: flex;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    justify-content: flex-start; /* Align icons to the left */
+}
+
+footer .footer-social ul li a {
+    font-size: 35px;
+    color: #e1e6ec;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer .footer-social ul li a:hover {
+    color: #ffffff;
+    transform: scale(1.2);
+}
+
+footer .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 2.5px solid #e1e6ec;
+    font-size: 13px;
+    color: #e1e6ec;
+    padding-top: 10px;
+}

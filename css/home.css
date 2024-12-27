@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Montserrat", serif;
+    background:#f3f4f6;
+}
+
+header{
+    margin: auto;
+    width: 80%;
+    height: 90vh;
+    /* border:1px solid black; */
+}
+
+header nav{
+    margin: auto;
+    width: 98%;
+    height: 10vh;
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav h1 {
+    margin: 0; 
+    color: #2E4156;
+    font-size: 26px;
+}
+
+nav .site-title-link {
+    text-decoration: none; 
+    color: inherit; 
+}
+
+.site-title-link:hover {
+    color: #b5bec9;
+    cursor: pointer;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 50px; 
+    margin: 0; 
+    padding: 0; 
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.3s linear;
+    color: #2E4156;
+    line-height: 1; 
+}
+
+
+header nav ul li a:hover{
+    color: grey;
+}
+
+header .content {
+    position: relative;
+    width: 100%;
+    height: 85%;
+    /* border: 1px solid black; */
+}
+
+header .content::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 55%;
+    /* background: url('img/testt.png')no-repeat center center/cover; */
+
+    background-color: #2E4156;
+    z-index: -1;
+    border-radius: 15px;
+    /* border: 1px solid black; */
+}
+
+header .content .cont{
+    width: 500px;
+    height: auto;
+    padding: 30px;
+    /* border: 1px black solid; */
+
+}
+
+header .content .cont h1{
+    line-height: 40px;
+    font-weight: 700; 
+    /* color: rgb(40, 34, 34); */
+    color: #e1e6ec;
+    margin-bottom: 25px;
+}
+
+header .content .cont p{
+    line-height: 20px;
+    font-weight: 400;
+    color: #e1e6ec;   
+    margin-bottom: 25px; 
+}
+
+.button-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f3f4f6; /* Button background color */
+    color: #2E4156; /* Text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Text size */
+    font-weight: bold; /* Bold text */
+    text-align: center; /* Center align text */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Add hover effects */
+    margin-top: 10px;
+}
+
+.button-link:hover {
+    background-color: #ffffff; /* Darker background on hover */
+    transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+header .why-icon{
+    position: relative;
+    width: 100%;
+    height: 270px;
+    margin:auto;
+    margin-top: 25px;
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    box-shadow: 0px 15px 20px -10px gray;
+
+}
+
+/* header .why-icon::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background: rgb(233, 226, 226) .7;
+    backdrop-filter: blur(5px);
+    z-index: -1;
+     /* border: 1px solid black; 
+}*/
+ 
+ 
+
+header .why-icon h4{
+    margin: 0;
+    margin-top: 30px;
+    margin-bottom: 0;
+    font-size: large;
+    font-weight: 700;
+    color: rgb(40, 34, 34);
+    text-align: center;
+}
+
+header .why-icon .cards{
+    width: 95%;
+    height: auto;
+    margin: 0 auto;
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+header .why-icon .cards .card {
+    width: 260px;
+    height: 220px;
+    border-radius: 10px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column;
+    padding: 10px;
+    margin-top: 0;
+}
+
+header .why-icon .cards .card img {
+    width: 70%;
+    height: 140px;
+    object-fit: contain; /* image maintains its aspect ratio */
+    box-shadow: 0px 0px 5px gray; 
+    border-radius: 5px;
+    margin-top: 0;
+    opacity: 0.63; /* Initial opacity */
+    transition: opacity 0.3s ease; 
+    /* background-color: #e18a8a; */
+    /* background-color: rgb(178, 199, 237); */
+}
+
+header .why-icon .cards .card h4{
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(40, 34, 34);
+    text-align: center;
+    margin-top: 10px;
+}
+header .why-icon .cards .card:hover img {
+    opacity: 0.9; 
+    transform: scale(1.05); /* enlarge image */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth animation */
+}
+
+header .why-icon .cards .card:hover h4 {
+    color: rgb(0, 0, 0); 
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.top-picks{
+    width: 80%;
+    height: 300px;
+    /* border: 1px solid black; */
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: #2E4156;  
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.top-picks h2 {
+    font-weight: 600;
+    text-align: center;
+    color: #e1e6ec;
+    margin-top: 0;
+}
+
+.top-picks .cards{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 7px;
+    /* border: 1px solid black; */
+}
+
+.top-picks .cards .card{
+    position: relative;
+    width: 285px;
+    height: 230px;
+    /* border: 3px solid black; */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: whitesmoke;
+    margin: 0 5px;
+}
+
+.top-picks .cards .card img{
+    
+    width: 92%;
+    height: 175px;
+    border-radius: 15px;
+    margin: 0 auto;
+    margin-top: 10px;
+    border: 3.5px solid whitesmoke;
+    align-items: center;
+    display: block;
+}
+
+.top-picks .cards .card img:hover{
+    
+    transform: scale(1.05);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  
+}
+.top-picks .cards .card h4{
+    margin: auto;
+    margin-top: 10px;
+    margin-left: 15px;
+}
+
+
+/* Footer */
+footer {
+    width: 100%;
+    height: auto; /* Let height adjust based on content */
+    background-color: #2E4156;
+    margin: 0;
+    margin-top: 100px;
+    padding: 20px 0; /* Increase padding for better spacing */
+    box-sizing: border-box; /* Ensure padding and borders are included in the width/height */
+}
+
+footer .footer-container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Wrap content on smaller screens */
+    gap: 80px; /* Add spacing between items */
+    align-items: flex-start; /* Align items at the top */
+}
+
+footer .footer-links,
+footer .footer-social,
+footer .footer-support {
+    flex: 1;
+    min-width: 200px; /* Ensure sections don't shrink too small */
+    margin: 20px;
+}
+
+footer h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #e1e6ec;
+    padding: 0;
+    text-align: left; /* Align headings to the left */
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+}
+
+footer ul li {
+    margin-bottom: 15px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: #e1e6ec;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+    color: #b5bec9;
+}
+
+footer .footer-support p {
+    font-size: 16px;
+    line-height: 24px;
+    margin: 10px 0;
+    color: #e1e6ec;
+}
+
+footer .footer-support a {
+    text-decoration: none;
+    color: #e1e6ec;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+footer .footer-support a:hover {
+    color: #f7f9fb;
+}
+
+footer .footer-social ul {
+    display: flex;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    justify-content: flex-start; /* Align icons to the left */
+}
+
+footer .footer-social ul li a {
+    font-size: 35px;
+    color: #e1e6ec;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer .footer-social ul li a:hover {
+    color: #ffffff;
+    transform: scale(1.2);
+}
+
+footer .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 2.5px solid #e1e6ec;
+    font-size: 13px;
+    color: #e1e6ec;
+    padding-top: 10px;
+}
+
+
+
+

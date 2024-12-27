@@ -1,0 +1,442 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", serif;
+}
+
+
+body{
+    font-family: "Montserrat", serif;
+    background:#f3f4f6;
+    margin: 0;
+}
+
+nav {
+    margin: auto;
+    width: 78%;
+    height: 10vh;
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav h1 {
+    margin: 0; 
+    color: #2E4156;
+    font-size: 26px;
+}
+
+nav .site-title-link {
+    text-decoration: none; 
+    color: inherit; 
+}
+
+.site-title-link:hover {
+    color: #b5bec9;
+    cursor: pointer;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 50px; 
+    margin: 0; 
+    padding: 0; 
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.3s linear;
+    color: #2E4156;
+    line-height: 1; 
+}
+
+nav ul li a:hover {
+    color: grey;
+}
+
+
+/* Content */
+/* Cardss */
+
+.product-template {
+    display: flex;
+    justify-content: flex-start;
+
+    height: 80vh; 
+    width: 80%;
+    /* border: 1px solid #000000; */
+    margin: 10px auto;
+    background-color: #2E4156;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+}
+
+.product-template .product-image {
+    width: 35%;
+    height: 55%;
+    margin: auto 35px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid #000000; */
+    background-color: #f3f4f6;
+    border-radius: 10px;
+}
+
+.product-template img {
+    width: 350px;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+}
+
+
+.product-template .product-detail {
+    width: 55%;
+    height: 80%;
+    margin: auto 0;
+    padding: 40px;
+    background-color: #f3f4f6;  
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+.product-template .product-detail h1{
+    margin-top: 10px auto;
+    margin-bottom: 30px;
+}
+
+.value-selector {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 15px;
+}
+.product-detail p{
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.value-selector input[type="radio"] {
+    display: none;
+}
+
+.value-selector label {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    transition: background-color 0.3s;
+    margin-bottom: 25px;
+    font-size: 18px;
+    margin-top: 7px;
+}
+
+.value-selector input[type="radio"]:checked + label {
+    background-color: #2E4156;
+    color: white;
+    border: 1.5px solid #2E4156;
+    
+}
+
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.quantity-selector button {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    background-color: #f7f7f7;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-top: 7px;
+}
+
+.quantity-selector button:hover {
+    background-color: #eaeaea;
+}
+
+.quantity-selector input {
+    width: 50px;
+    height: 30px;
+    text-align: center;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    margin-top: 7px;
+    font-family: "Montserrat", serif;
+}
+
+
+.product-detail .button-link {
+    margin-top: 45px;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #e1e6ec;
+    transition: background-color 0.3s;
+    margin-bottom: 20px;
+    color: #2E4156;
+    font-size: 20px;
+    font-weight: 800;
+    font-family: "Montserrat", serif;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.product-detail .button-link:hover {
+    background-color: #ffffff;
+    color: rgb(6, 15, 42);
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.6);
+    transition: 0.3s;
+}
+
+
+/* cart  */
+/* Cart Sidebar Styles */
+
+/* Cart Sidebar */
+/* .cart-sidebar {
+    position: fixed;
+    top: 0;
+    right: -500px;
+    width: 500px;
+    height: 100vh;
+    background: #fff;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.2);
+    transition: right 0.3s ease;
+    z-index: 1000;
+}
+
+.cart-sidebar.open {
+    right: 0;
+}
+
+.cart-header {
+    padding: 20px;
+    background: #2E4156;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-close {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.cart-items {
+    padding: 20px;
+    overflow-y: auto;
+    max-height: calc(100vh - 180px);
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    gap: 15px;
+}
+
+.cart-item-image {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.cart-item-info {
+    flex-grow: 1;
+}
+
+.cart-item-info h4 {
+    margin: 0 0 5px 0;
+}
+
+.cart-item-info p {
+    margin: 0;
+    color: #666;
+}
+
+.cart-item-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cart-quantity {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.cart-quantity button {
+    width: 25px;
+    height: 25px;
+    border: 1px solid #ccc;
+    background: #f7f7f7;
+    cursor: pointer;
+}
+
+.cart-quantity input {
+    width: 40px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+.delete-item {
+    background: none;
+    border: none;
+    color: #ff4444;
+    cursor: pointer;
+}
+
+.cart-total {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    background: #f7f7f7;
+    border-top: 1px solid #eee;
+}
+
+.cart-count {
+    position: absolute;
+    background: #e1e6ec;
+    color: #2E4156;
+    padding: 2px 6px;
+    font-size: 14px;
+} */
+
+
+
+
+
+/* Footer */
+footer {
+    width: 100%;
+    height: auto; /* Let height adjust based on content */
+    background-color: #2E4156;
+    margin: 0;
+    margin-top: 100px;
+    padding: 20px 0; /* Increase padding for better spacing */
+    box-sizing: border-box; /* Ensure padding and borders are included in the width/height */
+}
+
+footer .footer-container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Wrap content on smaller screens */
+    gap: 80px; /* Add spacing between items */
+    align-items: flex-start; /* Align items at the top */
+}
+
+footer .footer-links,
+footer .footer-social,
+footer .footer-support {
+    flex: 1;
+    min-width: 200px; /* Ensure sections don't shrink too small */
+    margin: 20px;
+}
+
+footer h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #e1e6ec;
+    padding: 0;
+    text-align: left; /* Align headings to the left */
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+}
+
+footer ul li {
+    margin-bottom: 15px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: #e1e6ec;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+    color: #b5bec9;
+}
+
+footer .footer-support p {
+    font-size: 16px;
+    line-height: 24px;
+    margin: 10px 0;
+    color: #e1e6ec;
+}
+
+footer .footer-support a {
+    text-decoration: none;
+    color: #e1e6ec;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+footer .footer-support a:hover {
+    color: #f7f9fb;
+}
+
+footer .footer-social ul {
+    display: flex;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    justify-content: flex-start; /* Align icons to the left */
+}
+
+footer .footer-social ul li a {
+    font-size: 35px;
+    color: #e1e6ec;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer .footer-social ul li a:hover {
+    color: #ffffff;
+    transform: scale(1.2);
+}
+
+footer .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 2.5px solid #e1e6ec;
+    font-size: 13px;
+    color: #e1e6ec;
+    padding-top: 10px;
+}
