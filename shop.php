@@ -13,8 +13,8 @@ $result = $conn->query($sql);
     <title>Shop</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="shop.css">
-    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="css/shop.css">
+    <link rel="stylesheet" href="css/cart.css">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
 </head>
 <body>
@@ -90,6 +90,6 @@ $result = $conn->query($sql);
         </div>
     </footer>
 
-    <script src="addToCart.js"></script>
+    <script src="js/addToCart.js"></script>
 </body>
 </html>
