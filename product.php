@@ -118,7 +118,7 @@ if (isset($_GET['id'])) {
             <p>&copy; 2024 GenCards. All rights reserved.</p>
         </div>
     </footer>
-    <script src="itemCount.js"></script>
-    <script src="addToCart.js"></script>
+    <script src="js/itemCount.js"></script>
+    <script src="js/addToCart.js"></script>
 </body>
 </html>
