@@ -1,7 +1,7 @@
 <?php
 require_once 'db.php';
 
-// Rename to checkout.php
+
 class CheckoutSystem {
     private $conn;
     private $orderId;
@@ -15,7 +15,7 @@ class CheckoutSystem {
         $this->conn->begin_transaction();
         
         try {
-            // First create or get customer
+            
             $customerId = $this->createCustomer($customerInfo);
             
             // Create order record
@@ -117,8 +117,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="utf-8">
     <title>Checkout - GenCards</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="product-pg.css">
-    <link rel="stylesheet" href="checkout.css">
+    <link rel="stylesheet" href="css/product-pg.css">
+    <link rel="stylesheet" href="css/checkout.css">
 </head>
 <body>
     <nav>
@@ -228,7 +228,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </footer>
 
     <script>
-        // Populate expiry date dropdowns
+        
         const monthSelect = document.getElementById('expiry-month');
         const yearSelect = document.getElementById('expiry-year');
         
@@ -247,7 +247,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             yearSelect.appendChild(option);
         }
 
-        // Load and display cart items
+        // Loads and displays cart items
         function loadCartItems() {
             const cart = JSON.parse(localStorage.getItem('cart')) || [];
             const orderItems = document.getElementById('order-items');
